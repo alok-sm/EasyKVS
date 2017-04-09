@@ -1,3 +1,4 @@
+import json
 from flask import jsonify
 from flask import request
 from helpers import write_log
@@ -8,6 +9,8 @@ from functions import mod_key
 from functions import del_key
 from flask_with_defaults import FlaskWithDefaults
 
+
+config = json.load(open('config.json'))
 
 app = FlaskWithDefaults(__name__)
 CORS(app)
@@ -23,7 +26,7 @@ def add_key(key):
 
     if request.method in ['POST', 'PUT'] and (request.data is None or request.data == ''):
         response = 'You need to send a value', 500
-
+    
     if response[1] != 500:
         if request.method == 'GET':
             response = get_key(key)
@@ -40,4 +43,4 @@ def add_key(key):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, threaded=True, debug=True)
+    app.run(host=config['host'], port=config['port'], threaded=config['threaded'], debug=config['debug'])

@@ -1,9 +1,5 @@
 import sys
-import logging
 import json
-
-log = logging.getLogger('werkzeug')
-log.setLevel(logging.ERROR)
 
 def write_log(key, request, response):
     log_line = {
@@ -14,4 +10,4 @@ def write_log(key, request, response):
         'res_str': response[0]
     }
 
-    print >> sys.stdout, json.dumps(log_line, sort_keys=True)
+    print json.dumps(log_line, sort_keys=True)
