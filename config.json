@@ -2,5 +2,7 @@
     "host": "0.0.0.0",
     "port": 8000,
     "debug": true,
-    "threaded": true
+    "threaded": true,
+    "strict_modify": false,
+    "strict_delete": false
 }

@@ -26,16 +26,16 @@ def add_key(key):
 
     if request.method in ['POST', 'PUT'] and (request.data is None or request.data == ''):
         response = 'You need to send a value', 500
-    
+
     if response[1] != 500:
         if request.method == 'GET':
             response = get_key(key)
         if request.method == 'POST':
             response = set_key(key, request.data)
         if request.method == 'PUT':
-            response = mod_key(key, request.data)
+            response = mod_key(key, request.data, config['strict_modify'])
         if request.method == 'DELETE':
-            response = del_key(key)
+            response = del_key(key, config['strict_delete'])
 
     write_log(key, request, response)
 

@@ -13,14 +13,15 @@ def set_key(key, value):
     data[key] = value
     return '', 204
 
-def mod_key(key, value):
-    if key not in data:
+def mod_key(key, value, strict_modify):
+    if strict_modify and key not in data:
         return 'Key not found. Send a POST request to set the key', 500
     data[key] = value
     return '', 204
 
-def del_key(key):
-    if key not in data:
+def del_key(key, strict_delete):
+    if strict_delete and key not in data:
         return 'Key to delete not found', 500
-    del data[key]
+    try: del data[key]
+    except Exception as e: pass
     return '', 204
