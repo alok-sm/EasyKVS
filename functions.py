@@ -1,5 +1,5 @@
 import shelve
-data = shelve.open("data")
+data = shelve.open("data.shelve")
 
 def get_key(key):
     value = data.get(key, None)
