@@ -13,6 +13,12 @@ git clone https://github.com/alok-sm/EasyKVS.git
 
 ### Install the Requirements
 
+`cd` into the EasyKVS directory
+
+```
+cd EasyKVS
+```
+
 Install all the required packages using pip:
 
 ```
