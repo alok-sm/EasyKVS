@@ -3,6 +3,10 @@ EasyKVS - an easy key value store server written in Python for small web apps
 
 ## Starting the server
 
+### Install Python 2.7
+
+Python 2.7 can be installed from [https://www.python.org/downloads/](https://www.python.org/downloads/)
+
 ### Install pip
 
 Pip can be installed from [https://pip.pypa.io/en/stable/installing/](https://pip.pypa.io/en/stable/installing/)
