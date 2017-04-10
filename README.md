@@ -106,3 +106,11 @@ send a `204` empty response even if the key to be deleted never existed
 ## Troubleshooting
 
 In some machines, you might need to use `python2` instead of `python` and `pip2` instead of `pip`
+
+## Checking stored values
+
+You can run
+```
+python print_db.py
+```
+to print out the contents of the data stored on your server in `JSON` format
