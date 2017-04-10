@@ -21,6 +21,22 @@ python routes.py
 ```
 
 
+### Configuring the server (optional)
+
+You can configure the server by modifying the `config.json` to suit you needs. Here's what each key does:
+- `host`: This sets the host of the server. `0.0.0.0` allows you to access the server from a remote location whereas `localhost` only lets you access the API from a local site. You can also set this value to the IP address of the machine that you are using to run the server.
+
+- `port`: By default, the server runs on port `8000` but you can change this if it conflicts with your webserver.
+
+- `debug`: If this is set to `true`, the server auto restarts if the source code of the server changes
+
+- `threaded`: If this is set to `true`, the server runs on multiple threads for better performance but debugging might be harder.
+
+- `strict_modify`: refer to the [`PUT` requestion section](https://github.com/alok-sm/EasyKVS/blob/master/README.md#put-to-modify-the-value-of-a-key) of the readme
+
+- `strict_delete`: refer to the [`DELETE` requestion section](https://github.com/alok-sm/EasyKVS/blob/master/README.md#delete-to-drop-a-key) of this readme
+
+
 ## Using the API
 
 The API endpoint `/kvs` is all you need. You can send the following functions
