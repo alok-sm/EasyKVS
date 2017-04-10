@@ -22,7 +22,7 @@ cd EasyKVS
 Install all the required packages using pip:
 
 ```
-pip install requirements.txt
+pip install --upgrade -r requirements.txt
 ```
 
 
