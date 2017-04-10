@@ -24,8 +24,7 @@ class Functions:
         return '', 204
 
     def del_key(self, key, strict_delete):
-        if strict_delete and key not in self.data:
-            return 'Key to delete not found', 500
         try: del self.data[key]
-        except Exception as e: pass
+        except Exception as e:
+            if strict_delete: return 'Key to delete not found', 500
         return '', 204
