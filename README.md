@@ -3,6 +3,14 @@ EasyKVS - an easy key value store server written in Python for small web apps
 
 ## Starting the server
 
+### Download the source
+
+Run the git clone command to clone this repo to your machine
+
+```
+git clone https://github.com/alok-sm/EasyKVS.git
+```
+
 ### Install the Requirements
 
 Install all the required packages using pip:
