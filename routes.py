@@ -3,15 +3,13 @@ from flask import jsonify
 from flask import request
 from helpers import write_log
 from flask_cors import CORS
-from functions import get_key
-from functions import set_key
-from functions import mod_key
-from functions import del_key
+from function_defs import Functions
 from flask_with_defaults import FlaskWithDefaults
 
 
 config = json.load(open('config.json'))
 
+functions = Functions(config['storage_file'])
 app = FlaskWithDefaults(__name__)
 CORS(app)
 
@@ -29,13 +27,13 @@ def add_key(key):
 
     if response[1] != 500:
         if request.method == 'GET':
-            response = get_key(key)
+            response = functions.get_key(key)
         if request.method == 'POST':
-            response = set_key(key, request.data)
+            response = functions.set_key(key, request.data)
         if request.method == 'PUT':
-            response = mod_key(key, request.data, config['strict_modify'])
+            response = functions.mod_key(key, request.data, config['strict_modify'])
         if request.method == 'DELETE':
-            response = del_key(key, config['strict_delete'])
+            response = functions.del_key(key, config['strict_delete'])
 
     write_log(key, request, response)
 
