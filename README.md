@@ -102,3 +102,7 @@ delete a key that does not exist.
 
 If the `strict_delete` key is set to `false`, this will not throw an error and will simply
 send a `204` empty response even if the key to be deleted never existed
+
+## Troubleshooting
+
+In some machines, you might need to use `python2` instead of `python` and `pip2` instead of `pip
