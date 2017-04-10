@@ -34,7 +34,7 @@ You can configure the server by modifying the `config.json` to suit you needs. H
 
 - `strict_modify`: refer to the [`PUT` requestion section](https://github.com/alok-sm/EasyKVS/blob/master/README.md#put-to-modify-the-value-of-a-key) of the readme
 
-- `strict_delete`: refer to the [`DELETE requestion section](https://github.com/alok-sm/EasyKVS/blob/master/README.md#delete-to-drop-a-key) of this readme
+- `strict_delete`: refer to the [`DELETE` requestion section](https://github.com/alok-sm/EasyKVS/blob/master/README.md#delete-to-drop-a-key) of this readme
 
 
 ## Using the API
