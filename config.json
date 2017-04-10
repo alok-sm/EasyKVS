@@ -2,9 +2,9 @@
 {
     "host": "0.0.0.0",
     "port": 8000,
-    "storage_file": "data1.shelve",
+    "storage_file": "data.shelve",
     "debug": true,
     "threaded": true,
-    "strict_modify": false,
-    "strict_delete": false
+    "strict_modify": true,
+    "strict_delete": true
 }
