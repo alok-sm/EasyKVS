@@ -56,11 +56,18 @@ You can configure the server by modifying the `config.json` to suit you needs. H
 
 - `strict_delete`: refer to the [`DELETE` requestion section](https://github.com/alok-sm/EasyKVS/blob/master/README.md#delete-to-drop-a-key) of this readme
 
+- `allow_empty_values`: refer to 
+
 
 ## Using the API
 
-The API endpoint `/kvs` is all you need. You can send the following functions
-The API throws an error if the `key` is `null` or if the request body is `null` for the `POST` and `PUT` requests
+The API endpoint `/kvs` is all you need. You can send the following HTTP methods to perform actions on the API
+
+The API throws an error if the `key` is `null` or empty
+
+if the `allow_empty_values` key is set to `false` in `config.json`, the API will throw and error if the request body is 
+`null` for the `POST` and `PUT` requests, i.e: The API will not let you set empty values. If it is set to `true`, the 
+API will allow you to store empty values.
 
 #### `GET` to get the value of a key
 ```
