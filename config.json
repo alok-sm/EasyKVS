@@ -6,5 +6,5 @@
     "threaded": true,
     "strict_modify": true,
     "strict_delete": true,
-    "allow_empty_values": true
+    "allow_empty_values": false
 }
