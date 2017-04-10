@@ -44,7 +44,7 @@ The API throws an error if the `key` is `null` or if the request body is `null` 
 
 #### `GET` to get the value of a key
 ```
-GET /kvs/<key>
+GET localhost:8000/kvs/<key>
 ```
 
 Returns the value of the key with response code 200 if the key exists
@@ -52,7 +52,7 @@ Sends a `500` error if the key does not exist
   
 #### `POST` to set the value of a key
 ```
-POST /kvs/<key>
+POST localhost:8000/kvs/<key>
 ```
 
 Sets the value for the key to the text sent in the request body and will return a `204` empty response
@@ -60,7 +60,7 @@ Sends a `500` error if you try to set the value for a key that exists
 
 #### `PUT` to modify the value of a key
 ```
-PUT /kvs/<key>
+PUT localhost:8000/kvs/<key>
 ```
 
 Modifies the value for the key to the text sent in the request body and will return a `204` empty response
@@ -73,7 +73,7 @@ does not exist, i.e: It will create a new key and set the value to the string in
 
 #### `DELETE` to drop a key
 ```
-DELETE /kvs/<key>
+DELETE localhost:8000/kvs/<key>
 ```
 
 Deletes the key value pair for the key sent and will return a `204` empty reponse
