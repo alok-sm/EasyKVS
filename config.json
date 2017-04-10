@@ -1,3 +1,13 @@
+// Default values here for backup in case things go bad.
+// {
+//     "host": "0.0.0.0",
+//     "port": 8000,
+//     "debug": true,
+//     "threaded": true,
+//     "strict_modify": false,
+//     "strict_delete": false
+// }
+
 {
     "host": "0.0.0.0",
     "port": 8000,
