@@ -22,7 +22,7 @@ def add_key(key):
     if key is None or key == '':
         response = 'You need to send a key', 500
 
-    if request.method in ['POST', 'PUT'] and (request.data is None or request.data == ''):
+    if not config['allow_empty_values'] and request.method in ['POST', 'PUT'] and (request.data is None or request.data == ''):
         response = 'You need to send a value', 500
 
     if response[1] != 500:
