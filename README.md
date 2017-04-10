@@ -56,7 +56,7 @@ You can configure the server by modifying the `config.json` to suit you needs. H
 
 - `strict_delete`: refer to the [`DELETE` requestion section](https://github.com/alok-sm/EasyKVS/blob/master/README.md#delete-to-drop-a-key) of this readme
 
-- `allow_empty_values`: refer to 
+- `allow_empty_values`: refer to the [Using the API](https://github.com/alok-sm/EasyKVS/blob/master/README.md#using-the-api) section of this readme.
 
 
 ## Using the API
