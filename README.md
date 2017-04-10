@@ -46,6 +46,8 @@ You can configure the server by modifying the `config.json` to suit you needs. H
 
 - `port`: By default, the server runs on port `8000` but you can change this if it conflicts with your webserver.
 
+- `storage_file`: This key sets the file name of the file where the data is stored. If the file name does not exist, an empty file is created with the given name.
+
 - `debug`: If this is set to `true`, the server auto restarts if the source code of the server changes
 
 - `threaded`: If this is set to `true`, the server runs on multiple threads for better performance but debugging might be harder.
@@ -111,6 +113,7 @@ In some machines, you might need to use `python2` instead of `python` and `pip2`
 
 You can run
 ```
-python print_db.py
+python print_db.py <storage file name>
 ```
-to print out the contents of the data stored on your server in `JSON` format
+to print out the contents of the data stored in the specified file name in `JSON` format
+If no file name is specified, the script defaults to the file specified in `config.json`
