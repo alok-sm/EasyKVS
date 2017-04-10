@@ -115,5 +115,6 @@ You can run
 ```
 python print_db.py <storage file name>
 ```
-to print out the contents of the data stored in the specified file name in `JSON` format
+to print out the contents of the data stored in the specified file name in `JSON` format.
+
 If no file name is specified, the script defaults to the file specified in `config.json`
