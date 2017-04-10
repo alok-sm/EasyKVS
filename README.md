@@ -105,4 +105,4 @@ send a `204` empty response even if the key to be deleted never existed
 
 ## Troubleshooting
 
-In some machines, you might need to use `python2` instead of `python` and `pip2` instead of `pip
+In some machines, you might need to use `python2` instead of `python` and `pip2` instead of `pip`
