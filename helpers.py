@@ -3,11 +3,8 @@ import json
 
 # Write prettier logs for easy debugging
 def write_log(key, request, response):
-    log_line = {
-        'http_method': request.method, 
-        'req_key': key,
-        'req_val': request.data,
-        'res_code': response[1],
-        'res_str': response[0]
-    }
-    print(log_line)
+    print('http_method  : ' +  str(request.method))
+    print('req_key      : ' +  str(key))
+    print('req_val      : ' +  str(request.data))
+    print('res_code     : ' +  str(response[1]))
+    print('res_str      : ' +  str(response[0]))
