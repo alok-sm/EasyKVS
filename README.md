@@ -73,6 +73,12 @@ if the `allow_empty_values` key is set to `false` in `config.json`, the API will
 `null` for the `POST` and `PUT` requests, i.e: The API will not let you set empty values. If it is set to `true`, the 
 API will allow you to store empty values.
 
+#### `GET` to list all keys
+```
+GET localhost:8000/kvs
+```
+Returns a list of all keys present on the db encoded as a JSON string with response code 200
+
 #### `GET` to get the value of a key
 ```
 GET localhost:8000/kvs/<key>
