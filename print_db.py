@@ -2,6 +2,7 @@ import shelve
 import json
 import sys
 
+# dumps the contents of the db as a json string
 config = json.load(open('config.json'))
 storage_file = config['storage_file']
 if len(sys.argv) > 1:
