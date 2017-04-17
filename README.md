@@ -92,12 +92,36 @@ Sends a `500` error if the key does not exist
 POST localhost:8000/kvs/<key>
 ```
 
+Send the request as url encoded (default with jquery), like this:
+
+```
+$.ajax({
+    type: "POST",
+    url: "http://localhost:8000/kvs/" + key,
+    data: {value: <PUT YOUR VALUE STRING HERE>},
+    success: function(){
+        //THIS CODE IS CALLED WHEN THE REQUEST SUCCEDS
+    }
+})
+```
+
 Sets the value for the key to the text sent in the request body and will return a `204` empty response
 Sends a `500` error if you try to set the value for a key that exists
 
 #### `PUT` to modify the value of a key
 ```
 PUT localhost:8000/kvs/<key>
+```
+
+```
+$.ajax({
+    type: "PUT",
+    url: "http://localhost:8000/kvs/" + key,
+    data: {value: <PUT YOUR VALUE STRING HERE>},
+    success: function(){
+        //THIS CODE IS CALLED WHEN THE REQUEST SUCCEDS
+    }
+})
 ```
 
 Modifies the value for the key to the text sent in the request body and will return a `204` empty response
