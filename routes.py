@@ -27,22 +27,27 @@ def list_keys(methods=['GET']):
 def kvs(key):
     response = 'Unsupported HTTP method', 501
 
-    # Validate key value
+    # Validate the key 
     if key is None or key == '':
         response = 'You need to send a key', 500
 
-    # Make sure the body isn't empty for PUT and POST requests
-    if not config['allow_empty_values'] and request.method in ['POST', 'PUT'] and (request.data is None or request.data == ''):
-        response = 'You need to send a value', 500
+    print(request.form)
+
+    # validate the value
+    if request.method in ['POST', 'PUT']:
+        if request.form is None or request.form['value'] is None:
+            response = 'You need to send a value1', 500
+        if (not config['allow_empty_values'] and request.form['value'] == ''):
+            response = 'You need to send a value2', 500
 
     # Function dispatcher. Choose function from the functions class based on request type
     if response[1] != 500:
         if request.method == 'GET':
             response = functions.get_key(key)
         if request.method == 'POST':
-            response = functions.set_key(key, request.data)
+            response = functions.set_key(key, request.form['value'])
         if request.method == 'PUT':
-            response = functions.mod_key(key, request.data, config['strict_modify'])
+            response = functions.mod_key(key, request.form['value'], config['strict_modify'])
         if request.method == 'DELETE':
             response = functions.del_key(key, config['strict_delete'])
 
